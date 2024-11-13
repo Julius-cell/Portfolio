@@ -4,6 +4,26 @@
 @tailwind utilities;
 
 @layer base {
+  h1 {
+    font-weight: 700;
+    font-size: 64px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize;
+    line-height: 1;
+  }
+
+  p, span, a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+  }
+
   @font-face {
     font-family: "IBM Plex Mono", monospace;
     font-style: normal;
