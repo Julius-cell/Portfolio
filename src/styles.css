@@ -19,7 +19,10 @@
   p,
   span,
   a,
-  li {
+  li,
+  label,
+  input,
+  textarea {
     @apply font-normal text-sm leading-none;
   }
 
