@@ -5,7 +5,11 @@ module.exports = {
     fontFamily: {
       custom: ['"IBM Plex Mono"', "sans-serif"],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero': "url('assets/images/web-developer.png')",
+      }
+    },
   },
   plugins: [],
 };
