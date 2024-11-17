@@ -1,8 +1,9 @@
 <div class="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 h-screen px-4">
   <div class="bg-hero bg-contain bg-no-repeat bg-top"></div>
-  <div>
-    <h1>Experienced Software Developer & Web Architect</h1>
-    <h2 class="mt-4">senior software developer</h2>
+  <div class="flex flex-col">
+    <p class="text-base uppercase text-center">hi i am</p>
+    <h1 class="text-center">julio cid</h1>
+    <p class="mt-2 uppercase text-center">software developer & web architect </p>
     <ul class="mt-4 list-inside">
       <li>
         <strong class="ml-1">Front-End Proficiency</strong>
@@ -21,6 +22,14 @@
         <p class="hidden">: Committed to innovative, efficient solutions</p>
       </li>
     </ul>
+    <div class="flex mt-auto gap-x-2 justify-center py-4">
+      <a href="https://github.com/Julius-cell" target="_blank">
+        <img class="w-5 h-5" src="assets/images/github.png" alt="github" />
+      </a>
+      <a href="https://www.linkedin.com/in/julio-cid-beroiza/" target="_blank">
+        <img class="w-5 h-5" src="assets/images/linkedin.png" alt="linkedin" />
+      </a>
+    </div>
   </div>
 </div>
 
@@ -129,24 +138,143 @@
   <h1>showcase</h1>
 </div> -->
 
+<!-- Experience -->
+<div class="h-screen px-4 py-6">
+  <h1>experience</h1>
+  <!-- Item 1 -->
+  <div class="mt-4 flex gap-x-4">
+    <div class="w-10 relative">
+      <div class="absolute h-full left-1/2 border border-blue-600"></div>
+      <div class="w-6 h-6 rounded-full bg-blue-600"></div>
+    </div>
+    <div>
+      <p class="font-semibold text-base">
+        FullStack Developer <span class="text-xs">(Sept 2023 - now)</span>
+      </p>
+      <p class="italic">Femsa</p>
+      <ul>
+        <li class="pl-1">
+          Corrected critical errors on the e-commerce platform, improving
+          usability and conversion rates.
+        </li>
+        <li class="pl-1">
+          Developed and resolved service issues using NestJS, Typescript, and
+          Jest for testing.
+        </li>
+        <li class="pl-1">
+          Sought and implemented improvements to maintain clean and efficient
+          code.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="mt-4 flex gap-x-4">
+    <div class="w-10 relative">
+      <div class="absolute h-full left-1/2 border border-blue-600"></div>
+      <div class="w-6 h-6 rounded-full bg-blue-600"></div>
+    </div>
+    <div>
+      <p class="font-semibold text-base">
+        Software Engineer
+        <span class="text-xs">(July 2021 - Sept 2023)</span>
+      </p>
+      <p class="italic">Apply Digital</p>
+      <ul>
+        <li class="pl-1">
+          Developed component libraries using technologies such as Angular,
+          Tailwind, Storybook, TypeScript, among others.
+        </li>
+        <li class="pl-1">
+          Led the front-end team in developing a new checkout process.
+        </li>
+        <li class="pl-1">
+          Successfully deployed an e-commerce platform in three countries in
+          less than 6 months.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="mt-4 flex gap-x-4">
+    <div class="w-10 relative">
+      <div class="absolute h-full left-1/2 border border-blue-600"></div>
+      <div class="w-6 h-6 rounded-full bg-blue-600"></div>
+    </div>
+    <div>
+      <p class="font-semibold text-base">
+        Frontend Developer
+        <span class="text-xs">(January 2021 - July 2021)</span>
+      </p>
+      <p class="italic">Everis NTT Data</p>
+      <ul>
+        <li class="pl-1">
+          Designed and developed interactive models and features using HTML,
+          CSS, JavaScript, and the Angular framework.
+        </li>
+        <li class="pl-1">
+          Managed and integrated API data in JSON format, precisely adapting
+          them to the functional needs of the presentation layer, ensuring a
+          smooth and efficient user experience.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <!-- Contact me -->
 <div class="h-screen px-4 py-6">
   <h1>contact me</h1>
   <p class="mt-4 text-justify">
-    New Project, freelance inquiry, job's offer, or even a coffe.
+    New Project? want to say Hi? or even a coffe. Drop me a message!
   </p>
   <form [formGroup]="contactForm" class="mt-4">
     <div class="flex flex-col">
       <label for="first-name">Name: </label>
-      <input id="first-name" type="text" formControlName="firstName" placeholder="Name"/>
+      <input
+        id="first-name"
+        type="text"
+        formControlName="name"
+        placeholder="Name"
+      />
     </div>
     <div class="flex flex-col mt-4">
       <label for="email">Email: </label>
-      <input id="email" type="email" formControlName="email" placeholder="Email"/>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Email"
+      />
     </div>
     <div class="flex flex-col mt-4">
       <label for="subject">Subject: </label>
-      <textarea id="subject" type="text" formControlName="subject" placeholder="Your message..."></textarea>
+      <textarea
+        id="subject"
+        type="text"
+        formControlName="subject"
+        placeholder="Your message..."
+        rows="5"
+      ></textarea>
     </div>
+
+    <button type="button" (click)="sendMessage()">Send Message</button>
   </form>
+
+  <div class="mt-4">
+    <div class="flex gap-x-2 items-center">
+      <img class="w-5 h-5" src="assets/images/phone.png" alt="git" />
+      <p class="ml-2 font-bold">+33 07 66 95 23 80</p>
+    </div>
+    <div class="flex gap-x-2 mt-2 items-center">
+      <img class="w-5 h-5" src="assets/images/mail.png" alt="git" />
+      <p class="ml-2 font-bold">julio.cid.b&#64;gmail.com</p>
+    </div>
+    <div class="flex gap-x-2 mt-2 items-center">
+      <img class="w-5 h-5" src="assets/images/location.png" alt="git" />
+      <p class="ml-2 font-bold">Lyon, France 69001</p>
+    </div>
+  </div>
 </div>

@@ -22,7 +22,8 @@
   li,
   label,
   input,
-  textarea {
+  textarea,
+  button {
     @apply font-normal text-sm leading-none;
   }
 

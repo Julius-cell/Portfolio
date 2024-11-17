@@ -9,9 +9,15 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styles: [],
 })
 export class HomeComponent {
+
   contactForm = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
     subject: new FormControl(''),
   });
+
+  sendMessage(): void {
+    console.log(this.contactForm.value);
+    this.contactForm.reset();
+  }
 }
