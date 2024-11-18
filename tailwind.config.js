@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/app/**/**/*.component.html"],
+  content: ["./src/index.html", "./src/app/**/**/*.component.html"],
   theme: {
     fontFamily: {
       custom: ['"IBM Plex Mono"', "sans-serif"],
     },
     extend: {
       backgroundImage: {
-        'hero': "url('assets/images/web-developer.png')",
-      }
+        hero: "url('assets/images/web-developer.png')",
+      },
     },
   },
   plugins: [],
