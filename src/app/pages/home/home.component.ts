@@ -13,9 +13,10 @@ export class HomeComponent {
   pdfUrl: SafeResourceUrl;
 
   constructor(private sanitizer: DomSanitizer) {
-    this.pdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl('assets/cv-english.pdf');
+    this.pdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+      'assets/cv-english.pdf'
+    );
   }
-
 
   contactForm = new FormGroup({
     name: new FormControl(''),
@@ -26,5 +27,9 @@ export class HomeComponent {
   sendMessage(): void {
     console.log(this.contactForm.value);
     this.contactForm.reset();
+  }
+
+  navigateTo(sectionId: string): void {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   }
 }
