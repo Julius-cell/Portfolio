@@ -9,6 +9,12 @@ module.exports = {
       backgroundImage: {
         hero: "url('assets/images/web-developer.png')",
       },
+      fontSize: {
+        base: ["16px", "1"],
+      },
+      height: {
+        fill: "-webkit-fill-available",
+      },
     },
   },
   plugins: [],

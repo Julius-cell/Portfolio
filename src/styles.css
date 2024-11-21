@@ -62,3 +62,9 @@
     src: url(./assets/fonts/IBM_Plex_Mono/IBMPlexMono-Bold.ttf) format("ttf");
   }
 }
+
+@layer components {
+  .btn-primary {
+    @apply px-3 py-2 border rounded-sm mt-2 font-semibold;
+  }
+}
